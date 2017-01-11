@@ -21,6 +21,9 @@
   "devDependencies": {
     "buble": "^0.14.0",
     "cssmin": "^0.4.3",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
     "uglify-js": "^2.7.3",
     "vulcanize": "^1.14.8"
   }
