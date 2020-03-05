@@ -1,291 +1,307 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Resume</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Raleway:500,200,700" rel="stylesheet">
-		<style>
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6,
-			p,
-			a,
-			li,
-			span {
-				margin: 0;
-				font-family: 'Raleway', sans-serif
-			}
 
-			h5 {
-				margin-top: 0.4rem;
-				margin-bottom: 0.2rem
-			}
-			.resume {
-				background-color: #000;
-				min-height: 100vh
-			}
+<head>
+	<meta charset="UTF-8">
+	<title>Resume</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"
+		href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500,200,700" rel="stylesheet">
+	<style>
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		a,
+		li,
+		span {
+			margin: 0;
+			font-family: 'Raleway', sans-serif
+		}
 
-			.resume .main {
-				height: 100%;
-				width: 700px;
-				background-color: #fff;
-				padding: 0 25px;
-				margin: 0 auto
-			}
+		h5 {
+			margin-top: 0.4rem;
+			margin-bottom: 0.2rem
+		}
 
-			.resume .main .header {
-				padding: 5px;
-				border-bottom: 1px solid #212121
-			}
+		.resume {
+			background-color: #000;
+			min-height: 100vh
+		}
 
-			.resume .main .header .page-title-container {
-				margin: 0 auto;
-				text-align: center;
-			}
+		.resume .main {
+			height: 100%;
+			width: 700px;
+			background-color: #fff;
+			padding: 0 25px;
+			margin: 0 auto
+		}
 
-			.resume .main .header .page-title {
-				font-size: 40pt;
-				display: inline
-			}
+		.resume .main .header {
+			padding: 5px;
+			border-bottom: 1px solid #212121
+		}
 
-			.resume .main .header .page-title-first {
-				font-weight: 400
-			}
+		.resume .main .header .page-title-container {
+			margin: 0 auto;
+			text-align: center;
+		}
 
-			.resume .main .header .page-title-last {
-				font-weight: 200
-			}
+		.resume .main .header .page-title {
+			font-size: 36pt;
+			display: inline
+		}
 
-			.resume .main .header .header-icons {
-				text-align: center
-			}
+		.resume .main .header .page-title-first {
+			font-weight: 400
+		}
 
-			.resume .main .header .header-icons .page-subhead {
-				display: inline
-			}
+		.resume .main .header .page-title-last {
+			font-weight: 200
+		}
 
-			.resume .layout-row {
-				margin-bottom: 1%
-			}
+		.resume .main .header .header-icons {
+			text-align: center
+		}
 
-			.resume .main .indented {
-				padding-left: 40px
-			}
+		.resume .main .header .header-icons .page-subhead {
+			display: inline
+		}
 
-			.resume .main .category-row {
-				padding-bottom: 2px
-			}
+		.resume .layout-row {
+			margin-bottom: 1%
+		}
 
-			.resume .main .category-row .category {
-				margin-right: 10px;
-				padding-left: 5px;
-				padding-right: 10px;
-				padding: 12px
-			}
+		.resume .main .indented {
+			padding-left: 40px
+		}
 
-			.resume .main .category-row .category-row-title {
-				font-weight: 200;
-				font-size: 20px;
-				margin: .4rem 0
-			}
+		.resume .main .category-row {
+			padding-bottom: 2px
+		}
 
-			.resume .main .category-row .category-title,
-			.resume .main .category-row .category-subtitle {
-				display: inline;
-				margin-top: 10px;
-				margin-bottom: 5px
-			}
+		.resume .main .category-row .category {
+			margin-right: 10px;
+			padding-left: 5px;
+			padding-right: 10px;
+			padding: 12px
+		}
 
-			.resume .main .category-row .category-bullets {
-				margin-top: 0;
-				margin-bottom: 5px
-			}
+		.resume .main .category-row .category-row-title {
+			font-weight: 200;
+			font-size: 20px;
+			margin: .4rem 0
+		}
 
-			.resume .main .category-row p,
-			.resume .main .category-row li {
-				font-size: smaller
-			}
+		.resume .main .category-row .category-title,
+		.resume .main .category-row .category-subtitle {
+			display: inline;
+			margin-top: 10px;
+			margin-bottom: 5px
+		}
 
-			sidebar-category:last-of-type .category {
-				border-bottom: 0!important;
-				padding-bottom: 0!important;
-				margin-bottom: 0!important
-			}
+		.resume .main .category-row .category-bullets {
+			margin-top: 0;
+			margin-bottom: 5px
+		}
 
-			category:last-of-type category-item:last-of-type .category {
-				border-bottom: 0!important;
-				padding-bottom: 0!important;
-				margin-bottom: 0!important
-			}
+		.resume .main .category-row p,
+		.resume .main .category-row li {
+			font-size: smaller
+		}
 
-			a.page-subhead {
-				color: #616161;
-				text-decoration: none;
-			}
-		</style>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
-		<script>
-			angular.module("Resume", ["ngMaterial"]).component("resume", {
-					transclude: true,
-					template: '<div class="resume">\n    <section class="main" ng-transclude></section>\n  </div>'
-			}).component("resumeHeading", {
-					controllerAs: "r",
-					transclude: true,
-					bindings: {
-							firstName: "@",
-							lastName: "@",
-							website: "@",
-							phone: "@",
-							email: "@",
-							github: "@",
-							linkedin: "@"
-					},
-					template: '<div class="header">\n <div class="page-title-container">\n  <h1 class="page-title page-title-first">{{r.firstName}}</h1>\n  <h1 class="page-title page-title-last">{{r.lastName}}</h1>\n  </div>\n  <div class="header-icons">\n  <a ng-if="r.github" class="md-subhead page-subhead" ng-href="https://github.com/{{r.github}}" target="_blank">Github: {{r.github}}</a>\n  <span>|</span>\n  <a ng-if="r.website" class="md-subhead page-subhead" ng-href="https://{{r.website}}" target="_blank">Portfolio: {{r.website}}\n  <br>\n	</a>  <span ng-if="r.github" class="md-subhead page-subhead" >{{r.email}}</span>\n	<span>|</span>\n	<span ng-if="r.phone" class="md-subhead page-subhead">{{r.phone}}</span>\n	</div>\n	</div>\n	<ng-transclude></ng-transclude>'
-			}).component("resumeBody", {
-					transclude: true,
-					template: '<div layout="row" ng-transclude></div>'
-			}).component("resumeColumn", {
-					transclude: true,
-					template: "<div ng-transclude></div>"
-			}).component("sidebarCategory", {
-					controllerAs: "r",
-					bindings: {
-							name: "@"
-					},
-					transclude: true,
-					template: '<div flex="" class="category-row">\n  <div class="category">\n  <span class="category-row-title">{{r.name}}</span>\n      <ng-transclude></ng-transclude>\n  </div>\n  </div>'
-			}).component("category", {
-					controllerAs: "r",
-					bindings: {
-							name: "@"
-					},
-					transclude: true,
-					template: '<div flex="" class="category-row">\n    <h4 class="category-row-title">{{r.name}}</h4>\n    <ng-transclude></ng-transclude>\n  </div>'
-			}).component("categoryItem", {
-					controllerAs: "r",
-					bindings: {
-							title: "@",
-							subtitle: "@"
-					},
-					transclude: true,
-					template: '<div class="category" style="padding: 0">\n  <h5 class="category-title md-body-2">{{r.title}}</h5>\n	<h5 class="category-subtitle md-caption">{{r.subtitle}}</h5>\n	<ul class="category-bullets" ng-transclude></ul>\n  </div>'
-			});
-		</script>
-	</head>
-	<body ng-app="Resume" ng-cloak="">
-    <resume>
-			<resume-heading website="thinker3197.github.io" first-name="Ashish" last-name="Gupta" linkedin="ashish3197" github="thinker3197" email="ashishgupta.3197@gmail.com" phone="+91-8588926652">
-			</resume-heading>
-      <resume-body>
-				<resume-column flex="30">
-					<sidebar-category name="Education">
-						<h5>Maharaja Surajmal institute of Technology</h5>
-						<p>Graduating August 2019</p>
-						<p>Computer Science & Engineering</p>
-						<h5>Modern School</h5>
-						<p>Graduated March 2015</p>
-						<p>Percentage: 92.4%</p>
-					</sidebar-category>
-					<sidebar-category name="Coursework">
-						<p>Data Structures</p>
-						<p>Algorithms</p>
-						<p>Computer Graphics</p>
-						<p>Discrete Math</p>
-					</sidebar-category>
-					<sidebar-category name="Skills">
-						<h5>Programming</h5>
-						<p>Javascript / C++ / C /</p>
-						<p>CSS / Python / HTML</p>
-						<h5>Frameworks</h5>
-						<p>React / Angular 1.x / </p>
-						<p>Knockout / NodeJs</p>
-						<p>Express / Meteor</p>
-						<h5>Database</h5>
-						<p>MongoDB / PostGreSQL</p>
-						<h5>Tools</h5>
-						<p>VSCode / Nano / </p>
-						<p>Git / Zsh</p>
-						<h5>OS</h5>
-						<p>Unix / Wnidows</p>
-						<h5>Experience With</h5>
-						<p>Web Performance & Design Patterns /</p>
-						<p>App architecture /</p>
-						<p>Web Development</p>
-						<h5>Design</h5>
-						<p>Sketch</p>
-					</sidebar-category>
-					<sidebar-category name="Other Hacks">
-						<p>Angel Hack Delhi: Curious</p>
-						<p>Angel Hack Jaipur: Arc</p>
-						<p>HACK@NSIT: Erectus</p>
-					</sidebar-category>
-				</resume-column>
-				<resume-column flex="70">
-					<category name="Professional Experience">
-						<category-item title="Frontend Engineering Intern" subtitle="Wingify">
-							<li>Developed the VWO chrome plugin and released for internal testing</li>
-							<li>Plugin was built using Javascript, NodeJs and MySQL</li>
-							<li>Integrated the plugin with pre-existing VWO heatmap extension</li>
-						</category-item>
-						<category-item title="Web Engineering Intern" subtitle="Bobble App">
-							<li>Shipped the new Bobbble web app built on AngularJs</li>
-							<li>Worked on Bobble's creators community app</li>
-							<li>Wrote the app using Angular 2.x and improved performance by 25%</li>
-						</category-item>
-						<category-item title="Frontend Engineering Intern" subtitle="Inspiration Edge">
-							<li>Worked on data visualization platform using D3</li>
-							<li>Wrote scrappers for data parsing using Python's Scrapy</li>
-							<li>Improved and optimized page load times of sites</li>
-						</category-item>
-					</category>
-					<category name="Hackathons">
-							<category-item title="HACKIIITD" subtitle="Grand Prize Winner">
-								<li>Using Raspberry pi, pycam and ultrasonic sensor to help blind people detect objects</li>
-								<li>Image classification on scanned images to classify objects</li>
-								<li>Developed an AI assistant that responed to blind user’s questions</li>
-							</category-item>
-							<category-item title="Hack In The North" subtitle="3rd Prize Winner">
-								<li>Created a bookmarking platform like evernote that lets you choose specific content to bookmark</li>
-								<li>The platform consisted of a chrome extension, user’s dashboard and a hybrid mobile app</li>
-								<li>Hack was judged by Vivek Prakash (CTO Hackerearth)</li>
-							</category-item>
-							<category-item title="HACK@MSIT" subtitle="Sponsors Prize Winner">
-								<li>Created an peer to peer chat system for hackers</li>
-								<li>Used socket.io for bidirectional communication</li>
-							</category-item>
-					</category>
-					<category name="Selected Projects">
-						<category-item title="Progressively">
-							<li>A javascript library for preogressive rendering of images</li>
-							<li>Written entirely in vanilla js with no dependencies</li>
-							<li>Project has over ~180 stars on Github</li>
-						</category-item>
-						<category-item title="Why.js">
-							<li>An open source book that aims to demistify the gotchas in Javascript</li>
-							<li>Inspired by several talks that expose the language's weird behaviour</li>
-						</category-item>
-						<category-item title="Clippy">
-							<li>A bookmark manager to create more precise and easily accessible bookmarks</li>
-							<li>Enables user to select specific parts of webpage to bookmark</li>
-						</category-item>
-					</category>
-					<category name="Speaking ">
-						<li>Speaker at JSLovers Delhi meetup group</li>
-						<li>Intro to Javascript session at Local Hack Day by MLH</li>
-						<li>Javascript mentor at DevSoc Technical Society</li>
-					</category>
-				</resume-column>
-			</resume-body>
-    </resume>
-	</body>
+		sidebar-category:last-of-type .category {
+			border-bottom: 0 !important;
+			padding-bottom: 0 !important;
+			margin-bottom: 0 !important
+		}
+
+		category:last-of-type category-item:last-of-type .category {
+			border-bottom: 0 !important;
+			padding-bottom: 0 !important;
+			margin-bottom: 0 !important
+		}
+
+		a.page-subhead {
+			color: #616161;
+			text-decoration: none;
+		}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+	<script>
+		angular.module("Resume", ["ngMaterial"]).component("resume", {
+			transclude: true,
+			template: '<div class="resume">\n    <section class="main" ng-transclude></section>\n  </div>'
+		}).component("resumeHeading", {
+			controllerAs: "r",
+			transclude: true,
+			bindings: {
+				firstName: "@",
+				lastName: "@",
+				website: "@",
+				phone: "@",
+				email: "@",
+				github: "@",
+				linkedin: "@"
+			},
+			template: '<div class="header">\n <div class="page-title-container">\n  <h1 class="page-title page-title-first">{{r.firstName}}</h1>\n  <h1 class="page-title page-title-last">{{r.lastName}}</h1>\n  </div>\n  <div class="header-icons">\n  <a ng-if="r.github" class="md-subhead page-subhead" ng-href="https://github.com/{{r.github}}" target="_blank">Github: {{r.github}}</a>\n  <span>|</span>\n  <a ng-if="r.website" class="md-subhead page-subhead" ng-href="https://{{r.website}}" target="_blank">Portfolio: {{r.website}}\n  <br>\n	</a>  <span ng-if="r.github" class="md-subhead page-subhead" >{{r.email}}</span>\n	<span>|</span>\n	<span ng-if="r.phone" class="md-subhead page-subhead">{{r.phone}}</span>\n	</div>\n	</div>\n	<ng-transclude></ng-transclude>'
+		}).component("resumeBody", {
+			transclude: true,
+			template: '<div layout="row" ng-transclude></div>'
+		}).component("resumeColumn", {
+			transclude: true,
+			template: "<div ng-transclude></div>"
+		}).component("sidebarCategory", {
+			controllerAs: "r",
+			bindings: {
+				name: "@"
+			},
+			transclude: true,
+			template: '<div flex="" class="category-row">\n  <div class="category">\n  <span class="category-row-title">{{r.name}}</span>\n      <ng-transclude></ng-transclude>\n  </div>\n  </div>'
+		}).component("category", {
+			controllerAs: "r",
+			bindings: {
+				name: "@"
+			},
+			transclude: true,
+			template: '<div flex="" class="category-row">\n    <h4 class="category-row-title">{{r.name}}</h4>\n    <ng-transclude></ng-transclude>\n  </div>'
+		}).component("categoryItem", {
+			controllerAs: "r",
+			bindings: {
+				title: "@",
+				subtitle: "@"
+			},
+			transclude: true,
+			template: '<div class="category" style="padding: 0">\n  <h5 class="category-title md-body-2">{{r.title}}</h5>\n	<h5 class="category-subtitle md-caption">{{r.subtitle}}</h5>\n	<ul class="category-bullets" ng-transclude></ul>\n  </div>'
+		});
+	</script>
+</head>
+
+<body ng-app="Resume" ng-cloak="">
+	<resume>
+		<resume-heading website="thinker3197.github.io" first-name="Ashish" last-name="Gupta" linkedin="ashish3197"
+			github="thinker3197" email="ashishgupta.3197@gmail.com" phone="+91-8588926652">
+		</resume-heading>
+		<resume-body>
+			<resume-column flex="30">
+				<sidebar-category name="Education">
+					<h5>Maharaja Surajmal institute of Technology</h5>
+					<p>Graduated August 2019</p>
+					<p>Computer Science & Engineering</p>
+					<h5>Modern School</h5>
+					<p>Graduated March 2015</p>
+					<p>Percentage: 92.4%</p>
+				</sidebar-category>
+				<sidebar-category name="Coursework">
+					<p>Data Structures</p>
+					<p>Algorithms</p>
+					<p>Computer Graphics</p>
+					<p>Discrete Math</p>
+				</sidebar-category>
+				<sidebar-category name="Skills">
+					<h5>Programming</h5>
+					<p>Javascript / Ruby</p>
+					<p>C++ / Python / CSS</p>
+					<h5>Frameworks</h5>
+					<p>ReactJs / Angular</p>
+					<p>Knockout / NodeJs</p>
+					<p>Express / Meteor / Rails</p>
+					<h5>Database</h5>
+					<p>MongoDB / PostGreSQL</p>
+					<h5>Tools</h5>
+					<p>VSCode / Nano</p>
+					<p>Git / Zsh</p>
+					<h5>OS</h5>
+					<p>Unix / Windows</p>
+					<h5>Experience With</h5>
+					<p>Web Performance</p>
+					<p>Design Patterns</p>
+					<p>Problem Solving</p>
+					<h5>Design</h5>
+					<p>Sketch / Figma</p>
+				</sidebar-category>
+				<sidebar-category name="Other Hacks">
+					<p>Angel Hack Delhi: Curious</p>
+					<p>Angel Hack Jaipur: Arc</p>
+					<p>HACK@NSIT: Erectus</p>
+				</sidebar-category>
+			</resume-column>
+			<resume-column flex="70">
+				<category name="Professional Experience">
+					<category-item title="Software Engineer" subtitle="Procol">
+						<li>Leading 5 member frontend team at Procol.</li>
+						<li>Developed & scaled Procol's enterprise dashboard from scratch - React, Redux, Reselect etc
+						</li>
+						<li>Built microservices using NodeJs, MongoDB for integration in Procol's apps & dashboard</li>
+						<li>Built internal dashboard for support team to facilitate client onboarding & resolve support tickets</li>
+					</category-item>
+					<category-item title="Frontend Engineering Intern" subtitle="Wingify">
+						<li>Developed & released VWO chrome plugin - Chrome Extension API, PubSub model</li>
+						<li>VWO chrome plugin enabled observations & tracking module for sites without opening VWO dashboard</li>
+						<li>Integrated the plugin with pre-existing VWO heatmap extension</li>
+					</category-item>
+					<category-item title="Web Engineering Intern" subtitle="Bobble App">
+						<li>Shipped the new Bobbble web app built on AngularJs</li>
+						<li>Released Bobble's creators community application to allow creators share their content on Bobble's App
+						</li>
+						<li>Worked as the sole developer on the application - Angular 2, AJAX, CSS etc</li>
+					</category-item>
+					<category-item title="Frontend Engineering Intern" subtitle="Inspiration Edge">
+						<li>Worked on data visualization platform using D3</li>
+						<li>Built service for data parsing & cleaning - Python, Scrapy</li>
+						<li>Improved and optimized page load times of sites</li>
+					</category-item>
+				</category>
+				<category name="Hackathons">
+					<category-item title="HACKIIITD" subtitle="Grand Prize Winner">
+						<li>Using Raspberry pi, pycam and ultrasonic sensor to help blind people detect objects</li>
+						<li>Image classification on scanned images to classify objects</li>
+						<li>Developed an voice controlled assistant that responed to blind user’s queries</li>
+					</category-item>
+					<category-item title="Hack In The North" subtitle="3rd Prize Winner">
+						<li>Created a bookmarking platform like evernote that lets you choose specific content to
+							bookmark</li>
+						<li>The platform consisted of a chrome extension, user’s dashboard and a hybrid mobile app</li>
+						<li>Hack was judged by Vivek Prakash (CTO Hackerearth)</li>
+					</category-item>
+					<category-item title="HACK@MSIT" subtitle="Sponsors Prize Winner">
+						<li>Created an peer to peer chat system for hackers</li>
+						<li>Used socket.io for real-time communication</li>
+					</category-item>
+				</category>
+				<category name="Selected Projects">
+					<category-item title="Progressively">
+						<li>A javascript library for preogressive rendering of images - inspired by Medium's progressive loading
+						</li>
+						<li>Written entirely in vanilla js with no dependencies (less than 1.2kB when minified)</li>
+						<li>Project has around 680 stars on Github</li>
+					</category-item>
+					<category-item title="Clippy">
+						<li>A bookmark manager to create more precise and easily accessible bookmarks</li>
+						<li>Enables user to select specific parts of webpage to bookmark</li>
+						<li>Indexing of selected content based on date & domain</li>
+					</category-item>
+					<!-- <category-item title="Ink">
+						<li>A minimal 2 column theme for Jekyll</li>
+						<li>Inspired by several talks that expose the language's weird behaviour</li>
+					</category-item> -->
+				</category>
+				<category name="Speaking ">
+					<li>Intro to Javascript session at Local Hack Day by MLH</li>
+					<li>Javascript mentor at DevSoc Technical Society</li>
+				</category>
+			</resume-column>
+		</resume-body>
+	</resume>
+</body>
 </html>
