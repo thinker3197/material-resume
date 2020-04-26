@@ -154,7 +154,7 @@
 				github: "@",
 				linkedin: "@"
 			},
-			template: '<div class="header">\n <div class="page-title-container">\n  <h1 class="page-title page-title-first">{{r.firstName}}</h1>\n  <h1 class="page-title page-title-last">{{r.lastName}}</h1>\n  </div>\n  <div class="header-icons">\n  <a ng-if="r.github" class="md-subhead page-subhead" ng-href="https://github.com/{{r.github}}" target="_blank">Github: {{r.github}}</a>\n  <span>|</span>\n  <a ng-if="r.website" class="md-subhead page-subhead" ng-href="https://{{r.website}}" target="_blank">Portfolio: {{r.website}}\n  <br>\n	</a>  <span ng-if="r.github" class="md-subhead page-subhead" >{{r.email}}</span>\n	<span>|</span>\n	<span ng-if="r.phone" class="md-subhead page-subhead">{{r.phone}}</span>\n	</div>\n	</div>\n	<ng-transclude></ng-transclude>'
+			template: '<div class="header">\n <div class="page-title-container">\n  <h1 class="page-title page-title-first">{{r.firstName}}</h1>\n  <h1 class="page-title page-title-last">{{r.lastName}}</h1>\n  </div>\n  <div class="header-icons">\n  <a ng-if="r.github" class="md-subhead page-subhead" ng-href="https://github.com/{{r.github}}" target="_blank">Github: {{r.github}}</a>\n  <span>|</span>\n  <a ng-if="r.website" class="md-subhead page-subhead" ng-href="https://twitter.com/{{r.website}}" target="_blank">Twitter: {{r.website}}\n  <br>\n	</a>  <span ng-if="r.github" class="md-subhead page-subhead" >{{r.email}}</span>\n	<span>|</span>\n	<span ng-if="r.phone" class="md-subhead page-subhead">{{r.phone}}</span>\n	</div>\n	</div>\n	<ng-transclude></ng-transclude>'
 		}).component("resumeBody", {
 			transclude: true,
 			template: '<div layout="row" ng-transclude></div>'
@@ -189,7 +189,7 @@
 
 <body ng-app="Resume" ng-cloak="">
 	<resume>
-		<resume-heading website="thinker3197.github.io" first-name="Ashish" last-name="Gupta" linkedin="ashish3197"
+		<resume-heading website="thinker3197" first-name="Ashish" last-name="Gupta" linkedin="ashish3197"
 			github="thinker3197" email="ashishgupta.3197@gmail.com" phone="+91-8588926652">
 		</resume-heading>
 		<resume-body>
@@ -210,19 +210,19 @@
 				</sidebar-category>
 				<sidebar-category name="Skills">
 					<h5>Programming</h5>
-					<p>Javascript / Ruby</p>
-					<p>C++ / Python / CSS</p>
+					<p>Javascript / GoLang</p>
+					<p>NodeJs / CSS / Python</p>
 					<h5>Frameworks</h5>
-					<p>ReactJs / Angular</p>
-					<p>Knockout / NodeJs</p>
-					<p>Express / Meteor / Rails</p>
+					<p>ReactJS / Angular</p>
+					<p>Echo / Rails</p>
+					<p>Express / Meteor</p>
 					<h5>Database</h5>
-					<p>MongoDB / PostGreSQL</p>
+					<p>MongoDB / pgSQL</p>
 					<h5>Tools</h5>
 					<p>VSCode / Nano</p>
 					<p>Git / Zsh</p>
 					<h5>OS</h5>
-					<p>Unix / Windows</p>
+					<p>Unix / Linux</p>
 					<h5>Experience With</h5>
 					<p>Web Performance</p>
 					<p>Design Patterns</p>
@@ -239,16 +239,15 @@
 			<resume-column flex="70">
 				<category name="Professional Experience">
 					<category-item title="Software Engineer" subtitle="Procol">
-						<li>One of the earliest member at Procol. Took lead of all it's web facing products since then.</li>
-						<li>Built Procol's enterprise dashboard from ground up - React, Redux, Reselect etc
-						</li>
-						<li>Built microservices using NodeJs, Goalng & MongoDB for integration in Procol's apps & dashboard</li>
-						<li>Built internal dashboard for support team to facilitate client onboarding & resolve support tickets</li>
+						<li>Working on consumer dashboard to conduct live auctions - React, Redux, Less, ReCharts etc</li>
+						<li>Built admin dashboard for auction monitoring & raising tickets for support teams</li>
+						<li>Built microservices for integration in core applications using NodeJs, Goalng, MongoDB, Pupteer, AWS</li>
+						<li>Designed & developed live supply tracker for COVID-19 (essential-commodities.com) - Gatsby, GraphQL, SCSS</li>
 					</category-item>
 					<category-item title="Frontend Engineering Intern" subtitle="Wingify">
-						<li>Developed & released VWO chrome plugin - Chrome Extension API, PubSub model</li>
+						<li>Developed & released VWO chrome plugin - Chrome API, iFrames, PubSub</li>
 						<li>VWO chrome plugin enabled observations & tracking module for sites without opening VWO dashboard</li>
-						<li>Integrated the plugin with pre-existing VWO heatmap extension</li>
+						<li>Migrated existing heatmap extension's code into the new plugin.</li>
 					</category-item>
 					<category-item title="Web Engineering Intern" subtitle="Bobble AI">
 						<li>Shipped the new Bobbble web app built on AngularJs</li>
@@ -257,8 +256,7 @@
 						<li>Worked as the sole developer on frotend for the application - Angular 2, AJAX, CSS etc</li>
 					</category-item>
 					<category-item title="Frontend Engineering Intern" subtitle="Inspiration Edge">
-						<li>Worked on data visualization platform using D3</li>
-						<li>Built service for data parsing & cleaning - Python, Scrapy</li>
+						<li>Built an ETL service for data parsing & cleaning to feed into visualization dashboard - Python, Scrapy, NodeJs</li>
 						<li>Improved and optimized page load times of sites</li>
 					</category-item>
 				</category>
@@ -295,10 +293,6 @@
 						<li>A minimal 2 column theme for Jekyll</li>
 						<li>Inspired by several talks that expose the language's weird behaviour</li>
 					</category-item> -->
-				</category>
-				<category name="Speaking ">
-					<li>Intro to Javascript session at Local Hack Day by MLH</li>
-					<li>Javascript mentor at DevSoc Technical Society</li>
 				</category>
 			</resume-column>
 		</resume-body>
